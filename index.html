@@ -463,6 +463,7 @@
                 s.font = "48px Angelface";
                 s.fillStyle = 'lightsalmon';
 
+
                 // create new particles
 
                 var amount = particleRate * deltaTime;
@@ -474,10 +475,9 @@
                     var dir = pos.clone().length(settings.particles.velocity);
 
                     particles.add(canvas.width / 2 + pos.x, canvas.height / 2 - pos.y, dir.x, -dir.y);
-
+                //render text 
                 }
-
-
+                s.fillText("Ánh Trịnh",canvas.width / 2 - 92, canvas.height / 2 );
 
                 // update and draw particles
 
@@ -485,8 +485,6 @@
 
                 particles.draw(context, image);
 
-                //render text
-                s.fillText("Ánh Trịnh", 680, 360);
 
             }
 
