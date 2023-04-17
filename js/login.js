@@ -27,8 +27,8 @@ registerForm.addEventListener('submit', (event) => {
   localStorage.setItem('password', password);
 
   // Thông báo đăng ký thành công và chuyển hướng đến trang đăng nhập
-  alert('Đăng ký thành công!');
-  window.location.href = 'login.html'; // Chuyển hướng đến trang đăng nhập
+  alert('Đăng ký thành công!, Bạn hãy đăng nhập !!!');
+  window.location.href = 'index.html'; // Chuyển hướng đến trang đăng nhập
 });
 
 loginForm.addEventListener('submit', (event) => {
