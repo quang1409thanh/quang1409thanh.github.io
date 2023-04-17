@@ -1,0 +1,96 @@
+/* CSS for header */
+.pheader {
+    background-color: #1f2937;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    padding: 0 24px;
+  }
+  
+  .pheader-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .pheader-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .pheader-brand img {
+    height: 32px;
+  }
+  
+  .pheader-nav {
+    display: flex;
+    align-items: center;
+  }
+  
+  .nav-item {
+    color: #d1d5db;
+    margin-right: 16px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  
+  .nav-item:hover {
+    color: #fff;
+  }
+  
+  .nav-item.active {
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .pheader-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .pheader-menu {
+    margin-right: 24px;
+  }
+  
+  .pheader-menu-desktop-auth {
+    display: flex;
+    align-items: center;
+  }
+  
+  .btn {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+  }
+  
+  .btn-filled {
+    background-color: #2563eb;
+    color: #fff;
+  }
+  
+  .btn-filled:hover {
+    background-color: #1d4ed8;
+  }
+  
+  .btn-primary {
+    background-color: #2563eb;
+    color: #fff;
+  }
+  
+  .btn-primary:hover {
+    background-color: #1d4ed8;
+  }
+  
+  .pheader-mobile-toggle {
+    /* Keep this placeholder for future development on mobile */
+  }
+  

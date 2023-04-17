@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Eflyer</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <link rel="stylesheet" type="text/css" href="header.css" />
+
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+      <!-- font awesome -->
+      <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!--  -->
+      <!-- owl stylesheets -->
+      <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Poppins:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesoeet" href="css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+   </head>
+   <body>
+    <!-- header start-->
+    <div class="banner_bg_main">
+      <div class="pheader">
+         <div class="pheader-container">
+         <div class="pheader-left">
+            <div class="pheader-brand">
+               <a aria-current="page" href="/overview">
+               <img src="path/to/image.png" alt="Logo shop acc" />
+               </a>
+            </div>
+         </div>
+         <div class="pheader-nav">
+            <a aria-current="page" class="nav-item active" href="index.html">Trang Chủ</a>
+            <a class="nav-item" href="#">Sản Phẩm</a>
+            <a class="nav-item" href="#" id = "nap-tien-link">Nạp Tiền</a>
+            <a class="nav-item" href="#" id ="myBtn2">Dịch Vụ</a>
+            <a class="nav-item" href="#">Tin Tức</a>
+            <a class="nav-item" href="#">Hỗ Trợ</a>
+         </div>
+         <div class="pheader-right">
+               <div class="pheader-menu pheader-menu-desktop">
+               <div class="pheader-menu-desktop-auth">
+                  <a class="nav-item" role="button" href="user.html" id="infoBtn"></a>
+                  <a class="nav-item" role="button" href= "index.html" id="signoutBtn">Sign out</a>
+  
+                  <script>
+                      // Lấy giá trị từ localStorage
+                      const username = localStorage.getItem('username');
+  
+                      // Hiển thị giá trị trong thẻ div
+                      const loginBtn = document.getElementById('infoBtn');
+                      loginBtn.textContent = username;
+                  </script>               </div>
+               </div>
+            <style>
+               /* Khai báo chung cho cả 2 button */
+               .nav-item {
+                  cursor: pointer;
+                  padding: 8px 12px;
+                  border-radius: 4px;
+                  color: #fff;
+                  text-align: center;
+               }
+
+               /* Màu cho button Login */
+               #infoBtn {
+                  background-color: #007bff;
+               }
+
+               /* Màu cho button Sign up */
+               #signoutBtn {
+                  background-color: transparent;
+                  border: 1px solid #28a745;
+               }
+
+               /* Khi hover vào button Sign up */
+               #signoutBtn:hover {
+                  background-color: #28a745;
+               }
+
+               /* Khi active (click) vào button Sign up */
+               #signoutBtn:active {
+                  background-color: #1e7e34;
+               }
+            </style>
+
+            <script>
+               // Bắt sự kiện click vào button Sign up để thay đổi kiểu hiển thị
+               document.getElementById("signupBtn").addEventListener("click", function() {
+                  // Xóa class 'btn-primary' và thêm class 'btn-success'
+                  this.classList.remove("btn-primary");
+                  this.classList.add("btn-success");
+
+                  // Thay đổi nội dung của button
+                  document.getElementById("signupLabel").textContent = "Logged in";
+               });
+            </script>
+               <script>
+                  const loginBtn = document.getElementById('loginBtn');
+                  const signupBtn = document.getElementById('signupBtn');
+                  
+                  loginBtn.addEventListener('click', function() {
+                    loginBtn.classList.remove('nav-item-default');
+                    loginBtn.classList.add('nav-item-active');
+                  
+                    signupBtn.classList.remove('nav-item-active');
+                    signupBtn.classList.add('nav-item-default');
+                  });
+                  
+                  signupBtn.addEventListener('click', function() {
+                    signupBtn.classList.remove('nav-item-default');
+                    signupBtn.classList.add('nav-item-active');
+                  
+                    loginBtn.classList.remove('nav-item-active');
+                    loginBtn.classList.add('nav-item-default');
+                  });
+               </script>
+               <div class="pheader-mobile-toggle" role="button">
+               <!-- Keep this placeholder for future development on mobile -->
+            </div>
+         </div>          
+      </div>
+      </div>
+   
+      <!-- banner section start -->
+      <div class="banner_section layout_padding">
+         <div class="container">
+            <div id="my_slider" class="carousel slide" data-ride="carousel">
+               <div class="carousel-inner">
+                  <div class="carousel-item active">
+                     <div class="row">
+                        <div class="col-sm-12">
+                           <div class="buynow_bt"><a href="#">Buy Now</a></div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="row">
+                        <div class="col-sm-12">
+                           <div class="buynow_bt"><a href="#">Buy Now</a></div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="carousel-item">
+                     <div class="row">
+                        <div class="col-sm-12">
+                           <div class="buynow_bt"><a href="#">Buy Now</a></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <a class="carousel-control-prev" href="#my_slider" role="button" data-slide="prev">
+               <i class="fa fa-angle-left"></i>
+               </a>
+               <a class="carousel-control-next" href="#my_slider" role="button" data-slide="next">
+               <i class="fa fa-angle-right"></i>
+               </a>
+            </div>
+         </div>
+      </div>
+         <!-- banner section end -->   
+   </div>  
+
+
+   <div class="col-md-13">
+      <div class="text-center mt-5">
+         <center>
+            <img class="img-responsive img-thumbnail d-none d-md-block" src="images/tshirt-img.png" alt="" width="256" height="256">
+
+         </center>
+         <h2 class="font-weight-bold fs-28">UID Web: vananh</h2>
+         <h2 class="font-weight-bold fs-28">t1423@gmail.com</h2>
+         <h2 class="fs-22">Thành viên</h2>
+         <h2 class="fs-22">&nbsp;</h2>
+         <h2 class="fs-22 text-danger">0đ</h2>
+      </div>
+   </div>
+<!-- dây là phần ở dứoi -->
+      <div class="container">
+        <div class="c-layout-sidebar-menu c-theme ">
+            <div class="row1">
+                <div class="col-md-12 col-sm-6 col-xs-6 m-t-15 m-b-20">
+                    <!-- BEGIN: LAYOUT/SIDEBARS/SHOP-SIDEBAR-DASHBOARD -->
+                    <div class="c-content-title-3 c-title-md c-theme-border">
+                        <h3 class="c-left c-font-uppercase">Menu tài khoản</h3>
+                        <div class="c-line c-dot c-dot-left "></div>
+                    </div>
+
+                    <div class="c-content-ver-nav">
+                        <ul class="c-menu c-arrow-dot c-square c-theme">
+                            <li><a href="#" class="active" id = "md1">Thông tin tài khoản</a></li>
+                            <li><a href="#" class="p-quantity ">Hộp thư<span id="quantity_noti" class="quantity">0</span></a></li>
+                            <li><a href="#" class="" id = "md2">Biến đổi số dư</a></li>
+                            <li><a class="load-modal" href="#" rel="/profile/bank/add" id = "md3">Tài khoản ngân hàng</a></li>
+                            <!--<li><a href="/profile/withdraw" class="">Rút tiền ra ATM - Ví</a></li>-->
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-12 col-sm-6 col-xs-6 m-t-15">
+                    <div class="c-content-title-3 c-title-md c-theme-border">
+                        <h3 class="c-left c-font-uppercase" id = "md4">Menu giao dịch</h3>
+                        <div class="c-line c-dot c-dot-left "></div>
+                    </div>
+                    <div class="c-content-ver-nav m-b-20">
+                        <ul class="c-menu c-arrow-dot c-square c-theme">
+                            <li><a href="" id = "md5" class=""><b>Nạp thẻ tự động</b></a></li>
+                            <li><a id = "md6" class="load-modal" href="#" rel="/atm">Nạp tiền từ ATM - Ví Điện Tử</a></li>
+                            <li><a href="" id = "md7"class="">Tài khoản đã mua</a></li>
+                            <li><a href="" id = "md8"class="">Chuyển tiền</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="c-layout-sidebar-content ">
+            <!-- BEGIN: PAGE CONTENT -->
+            <!-- BEGIN: CONTENT/SHOPS/SHOP-CUSTOMER-DASHBOARD-1 -->
+            <div class="c-content-title-1">
+                <h3 class="c-font-uppercase c-font-bold">Thông tin tài khoản</h3>
+                <div class="c-line-left"></div>
+            </div>
+            <table class="table table-striped">
+                <tbody><tr>
+                            <th scope="row">UID của bạn:</th>
+                            <th><span class="c-font-uppercase">vananh</span></th>
+                        </tr>
+                         <tr>
+                            <th scope="row">Email:</th>
+                            <th>t1423@gmail.com</th>
+                        </tr>
+                        <tr>
+                            <th scope="row">Số dư tài khoản:</th>
+                            <td><b class="text-danger">0đ</b></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Nhóm tài khoản:</th>
+                            <td>Thành viên</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Ngày tham gia:</th>
+                            <td> 15-04-2023</td>
+                        </tr>
+                </tbody>
+            </table>
+            <!-- END: PAGE CONTENT -->
+        </div>
+    </div>
+          <!-- hiện nốị dụng bất kỳ test -->
+   <div id="myModal2" class="modal">
+      <div class="modal-content">
+         <span class="close">&times;</span>
+         <h2>Nội dung modal mới</h2>
+         <p>Đây là nội dung của modal mới.</p>
+      </div>
+   </div>
+   
+   <script>
+      var modal2 = document.getElementById("myModal2");
+      var md1 = document.getElementById("md1");
+      var md2 = document.getElementById("md2");
+      var md3 = document.getElementById("md3");
+      var md4 = document.getElementById("md4");
+      var md5 = document.getElementById("md5");
+      var md6 = document.getElementById("md6");
+      var md7 = document.getElementById("md7");
+      var md8 = document.getElementById("md8");
+
+      var span2 = document.getElementsByClassName("close")[0]  ;
+   
+      // md1.onclick = function() {
+      //    modal2.style.display = "block";
+      // }
+      
+      md2.onclick = function() {
+         modal2.style.display = "block";
+      }   
+      md3.onclick = function() {
+         modal2.style.display = "block";
+      }   
+      md4.onclick = function() {
+         modal2.style.display = "block";
+      }   
+      md5.onclick = function() {
+         modal2.style.display = "block";
+      }   
+      md6.onclick = function() {
+         modal2.style.display = "block";
+      }   
+      md7.onclick = function() {
+         modal2.style.display = "block";
+      }   
+      md8.onclick = function() {
+         modal2.style.display = "block";
+      }   
+
+      span2.onclick = function() {
+         modal2.style.display = "none";
+      }
+   
+   </script>
+      <!-- footer section start -->
+      <div class="footer_section layout_padding">
+         <div class="footer_menu">
+        <div class="row">
+          <div class="col-md-3 col-sm-12">
+            <h4>Về chúng tôi</h4>
+            <p>Webnick là một trong những website cung cấp tài khoản game, phần mềm, combo tài khoản uy tín và chất lượng hàng đầu Việt Nam.</p>
+            <p><i class="fa fa-phone-alt"></i> Gọi ngay: <a href="tel:+84396812345">+84 396 812 345</a></p>
+            <p><i class="fa fa-envelope"></i> Email: <a href="mailto:contact@webnick.vn">contact@webnick.vn</a></p>
+          </div>
+          <div class="col-md-3 col-sm-12">
+            <h4>Danh mục sản phẩm</h4>
+            <ul class>
+              <li><a href="#">- Trang Chủ</a></li>
+              <li><a href="#">- Mua Acc</a></li>
+              <li><a href="#">- Dịch Vụ</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-sm-12">
+            <h4>Hỗ trợ khách hàng</h4>
+            <ul>
+              <li><a href="#">- Hướng dẫn mua hàng</a></li>
+              <li><a href="#">- Điều khoản sử dụng</a></li>
+              <li><a href="#">- Chính sách bảo mật</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3 col-sm-12">
+          <h4>Theo dõi chúng tôi</h4>
+          <ul class="social-icons">
+            <li><a href="#"><i class="fa fa-facebook-f"></i>Facebook</a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i>Instagram</a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i>Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+      </div>
+      <!-- footer section end -->
+      <!-- copyright section start -->
+      <div class="copyright_section">
+         <div class="container">
+            <p class="copyright_text">© 2023 All Rights Reserved. Design by <a href="https://html.design">Team nine</a></p>
+         </div>
+      </div>
+      <!-- copyright section end -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <script src="js/login.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <script>
+         function openNav() {
+           document.getElementById("mySidenav").style.width = "250px";
+         }
+         
+         function closeNav() {
+           document.getElementById("mySidenav").style.width = "0";
+         }
+      </script>
+   </body>
+</html>

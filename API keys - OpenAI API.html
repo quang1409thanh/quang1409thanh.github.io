@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <!-- basic -->
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>Eflyer</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" type="text/css" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <!-- fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+      <!-- font awesome -->
+      <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <!--  -->
+      <!-- owl stylesheets -->
+      <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Poppins:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+      <link rel="stylesheet" href="css/owl.carousel.min.css">
+      <link rel="stylesoeet" href="css/owl.theme.default.min.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+   </head>
+   <body>
+      <!-- banner bg main start -->
+      <div class="banner_bg_main">
+         <!-- header top section start -->
+         <div class="container">
+            <div class="header_section_top">
+               <div class="row">
+                  <div class="col-sm-12">
+                     <div class="custom_menu">
+                        <ul>
+                           <li><a href="#">Trang chủ</a></li>
+                           <li><a href="#" id = "nap-tien-link">Nạp tiền</a></li>
+                           <li><a href="#">Mua Acc</a></li>
+                           <li><a href="#"id = "myBtn2" > Dịch vụ</a></li>
+                           <li><a href="#">Mua thẻ</a></li>
+                           <li><a href="#">Tin Tức</a></li>
+                           <li><a href="#">Hỗ Trợ</a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- header top section start -->
+         <!-- logo section start -->
+         <div class="logo_section">
+            <div class="container">
+               <div class="row">
+                  <div class="col-sm-12">
+                     <div class="logo"><a href="index.html"><img src="images/logo.png"></a></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- logo section end -->
+         <!-- header section start -->
+         <div class="header_section">
+            <div class="container">
+               <div class="containt_main">
+                  <div id="mySidenav" class="sidenav">
+                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                     <a href="index.html">Trang Chủ</a>
+                     <a href="mua_acc.html">Mua Acc</a>
+                     <a href="electronic.html">Dịch Vụ</a>
+                     <a href="jewellery.html">Tin tức</a>
+                  </div>
+                  <span class="toggle_icon" onclick="openNav()"><img src="images/toggle-icon.png"></span>
+                  <div class="dropdown">
+                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Danh mục
+                     </button>
+                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">Acc Thường</a>
+                        <a class="dropdown-item" href="#">Acc Random</a>
+                        <a class="dropdown-item" href="#">Acc Vjp </a>
+                        <a class="dropdown-item" href="#">Một số danh mục khác </a>
+
+                     </div>
+                  </div>
+                  <div class="main">
+                     <!-- Another variation with a button -->
+                     <div class="input-group">
+                        <input type="text" class="form-control" placeholder="Search this Shop">
+                        <div class="input-group-append">
+                           <button class="btn btn-secondary" type="button" style="background-color: #f26522; border-color:#f26522 ">
+                           <i class="fa fa-search"></i>
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="header_box">
+                     <div class="lang_box ">
+                        <a href="#" title="Language" class="nav-link" data-toggle="dropdown" aria-expanded="true">
+                        <img src="images/flag-uk.png" alt="flag" class="mr-2 " title="United Kingdom"> English <i class="fa fa-angle-down ml-2" aria-hidden="true"></i>
+                        </a>
+                        <div class="dropdown-menu ">
+                           <a href="#" class="dropdown-item">
+                           <img src="images/flag-france.png" class="mr-2" alt="flag">
+                           French
+                           </a>
+                        </div>
+                     </div>
+                     <div class="login_menu">
+                        <ul>
+                           <li><a href="#">
+                              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                              <span class="padding_10">Cart</span></a>
+                           </li>
+                           <li><a href="#" id = "loginBtn" >
+                              <i class="fa fa-user" aria-hidden="true"></i>
+                              <span class="padding_10">Sign in</span></a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- header section end -->
+
+         <!-- banner section start -->
+         <div class="banner_section layout_padding">
+            <div class="container">
+               <div id="my_slider" class="carousel slide" data-ride="carousel">
+                  <div class="carousel-inner">
+                     <div class="carousel-item active">
+                        <div class="row">
+                           <div class="col-sm-12">
+                              <h1 class="banner_taital">Get Start <br>Your favriot shoping1</h1>
+                              <div class="buynow_bt"><a href="#">Buy Now</a></div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="carousel-item">
+                        <div class="row">
+                           <div class="col-sm-12">
+                              <h1 class="banner_taital">Get Start <br>Your favriot shoping2</h1>
+                              <div class="buynow_bt"><a href="#">Buy Now</a></div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="carousel-item">
+                        <div class="row">
+                           <div class="col-sm-12">
+                              <h1 class="banner_taital">Get Start <br>Your favriot shoping3</h1>
+                              <div class="buynow_bt"><a href="#">Buy Now</a></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#my_slider" role="button" data-slide="prev">
+                  <i class="fa fa-angle-left"></i>
+                  </a>
+                  <a class="carousel-control-next" href="#my_slider" role="button" data-slide="next">
+                  <i class="fa fa-angle-right"></i>
+                  </a>
+               </div>
+            </div>
+         </div>
+         <!-- banner section end -->
+      </div>
+      <!-- banner bg main end -->
+      <!-- Modal -->
+      <div id="myModal" class="modal">
+         <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="switch-buttons">
+               <button class="active" id="login-button">Đăng nhập</button>
+               <button id="register-button">Đăng ký</button>
+            </div>
+            <form id="login-form">
+               <input type="text" id="login-username" placeholder="Tên đăng nhập" required>
+               <input type="password" id="login-password" placeholder="Mật khẩu" required>
+               <button type="submit">Đăng nhập</button>
+            </form>
+
+            <form id="register-form">
+               <input type="text" placeholder="Họ tên" required>
+               <input type="email"id = "register-username" placeholder="Email" required>
+               <input type="password" id = "register-password" placeholder="Mật khẩu" required>
+               <input type="password" placeholder="Xác nhận mật khẩu" required>
+               <button type="submit">Đăng ký</button>
+            </form>
+         <!-- end login -->
+         </div>
+      </div>
+      <script>
+         // JavaScript để điều khiển hiển thị/ẩn của modal
+         var modal = document.getElementById("myModal");
+         var btn = document.getElementById("loginBtn");
+         var span = document.getElementsByClassName("close")[0];
+      
+         btn.onclick = function() {
+            modal.style.display = "block";
+         }
+      
+         span.onclick = function(event) {
+            event.stopPropagation(); // Ngăn chặn sự kiện click lan toả lên phần tử cha
+            modal.style.display = "none";
+         }
+
+      </script>
+   <!-- nap tiền -->
+   <div id="myModal1" class="modal">
+      <div class="modal-content">
+         <span class="close">&times;</span>
+         <div class="switch-buttons">
+            <button class="active" id="atm">ATM</button>
+            <button id="vi_dien_tu">Ví điện tử</button>
+         </div>
+         <div id="atm_text" >
+            <h3>Chủ tài khoản: NGUYỄN QUANG THÀNH     	Chi nhánh
+               BIDV 	21510003902544               </h3>
+            <p>
+               Nội dung chuyển khoản: Nap  + tên tài khoản hoặc ID tài khoản
+               
+               Chuyển xong liên hệ facebook : Admin hoặc Hotline 0966711032 để được xử lý.
+               </p>
+         </div>
+         <div id="vi_dien_tu_text" style="display:none;">
+            <h3>Momo/Zalo pay	0966711032</h3>
+            <p>Nội dung chuyển khoản: Nap  + tên tài khoản hoặc ID tài khoản
+               Chuyển xong liên hệ facebook : Admin  hoặc Hotline 0966711032 để được xử lý.</p>
+         </div>
+      </div>
+   </div>
+   <script>
+      // JavaScript để điều khiển hiển thị/ẩn của modal1
+      var modal1 = document.getElementById("myModal1");
+      var nap_tien = document.getElementById("nap-tien-link");
+      var span1 = document.getElementsByClassName("close")[1];
+
+      nap_tien.onclick = function() {
+      modal1.style.display = "block";
+      }
+
+      span1.onclick = function(event) {
+      event.stopPropagation(); // Ngăn chặn sự kiện click lan toả lên phần tử cha
+      modal1.style.display = "none";
+      }
+      document.getElementById("atm").addEventListener("click", function() {
+      document.getElementById("atm_text").style.display = "block";
+      document.getElementById("vi_dien_tu_text").style.display = "none";
+      });
+   
+      document.getElementById("vi_dien_tu").addEventListener("click", function() {
+      document.getElementById("atm_text").style.display = "none";
+      document.getElementById("vi_dien_tu_text").style.display = "block";
+      });
+ </script>
+ <!-- hiện nốị dụng bất kỳ test -->
+ <div id="myModal2" class="modal">
+    <div class="modal-content">
+       <span class="close">&times;</span>
+       <h2>Nội dung modal mới</h2>
+       <p>Đây là nội dung của modal mới.</p>
+    </div>
+ </div>
+ 
+ <script>
+    var modal2 = document.getElementById("myModal2");
+    var btn2 = document.getElementById("myBtn2");
+    var span2 = document.getElementsByClassName("close")[2];
+ 
+    btn2.onclick = function() {
+       modal2.style.display = "block";
+    }
+ 
+    span2.onclick = function() {
+       modal2.style.display = "none";
+    }
+ 
+ </script>
+      <!-- mua_acc section start -->
+      <div class="mua_acc_section">
+         <div id="main_slider" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <div class="container">
+                     <h1 class="mua_acc_taital">DANH MỤC ACC EFOOTBALL MOBILE
+                     </h1>
+                     <div class="mua_acc_section_2">
+                        <div class="row">
+                           <div class="col-lg-4 col-sm-4">
+                              <div class="box_main">
+                                 <h4 class="shirt_text">ACC THƯỜNG </h4>
+                                 <p class="price_text">Số lượng:  <span style="color: #262626;"> 100</span></p>
+                                 <p class="price_text">Đã bán:  <span style="color: #262626;"> 10</span></p>
+                                 <div class="tshirt_img"><img src="images/tshirt-img.png"></div>
+                                 <div class="see_all">
+                                    <ul>
+                                       <li><a href="#">Xem tất cả</a></li>
+                                    </ul>
+                                 </div>
+                                 <!-- <div class="btn_main">
+                                    <div class="buy_bt"><a href="#">Buy Now</a></div>
+                                    <div class="seemore_bt"><a href="#">See More</a></div>
+                                 </div> -->
+                              </div>
+                           </div>
+                           <div class="col-lg-4 col-sm-4">
+                              <div class="box_main">
+                                 <h4 class="shirt_text">ACC RANDOM</h4>
+                                 <p class="price_text">Số lượng:  <span style="color: #262626;"> 100</span></p>
+                                 <p class="price_text">Đã bán:  <span style="color: #262626;"> 10</span></p>
+                                 <div class="tshirt_img"><img src="images/dress-shirt-img.png"></div>
+                                 <div class="see_all">
+                                    <ul>
+                                       <li><a href="#">Xem tất cả</a></li>
+                                    </ul>
+                                 </div>
+                                 <!-- <div class="btn_main">
+                                    <div class="buy_bt"><a href="#">Buy Now</a></div>
+                                    <div class="seemore_bt"><a href="#">See More</a></div>
+                                 </div> -->
+                              </div>
+                           </div>
+                           <div class="col-lg-4 col-sm-4">
+                              <div class="box_main">
+                                 <h4 class="shirt_text">ACC VIP</h4>
+                                 <p class="price_text">Số lượng:  <span style="color: #262626;"> 100</span></p>
+                                 <p class="price_text">Đã bán:  <span style="color: #262626;"> 10</span></p>
+                                 <div class="tshirt_img"><img src="images/women-clothes-img.png"></div>
+                                                             <div class="see_all">
+                                    <ul>
+                                       <li><a href="#">Xem tất cả</a></li>
+                                    </ul>
+                                 </div>
+                                 <!-- <div class="btn_main">
+                                    <div class="buy_bt"><a href="#">Buy Now</a></div>
+                                    <div class="seemore_bt"><a href="#">See More</a></div>
+                                 </div> -->
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="container">
+                     <h1 class="mua_acc_taital">DANH MỤC ACC EFOOTBALL MOBILE 1</h1>
+                     <div class="mua_acc_section_2">
+                        <div class="row">
+                           <div class="col-lg-4 col-sm-4">
+                              <div class="box_main">
+                                 <h4 class="shirt_text">ACC THƯỜNG </h4>
+                                 <p class="price_text">Số lượng:  <span style="color: #262626;"> 100</span></p>
+                                 <p class="price_text">Đã bán:  <span style="color: #262626;"> 10</span></p>
+                                 <div class="tshirt_img"><img src="images/tshirt-img.png"></div>
+                                 <div class="see_all">
+                                    <ul>
+                                       <li><a href="#">Xem tất cả</a></li>
+                                    </ul>
+                                 </div>
+                                 <!-- <div class="btn_main">
+                                    <div class="buy_bt"><a href="#">Buy Now</a></div>
+                                    <div class="seemore_bt"><a href="#">See More</a></div>
+                                 </div> -->
+                              </div>
+                           </div>
+                           <div class="col-lg-4 col-sm-4">
+                              <div class="box_main">
+                                 <h4 class="shirt_text">ACC RANDOM</h4>
+                                 <p class="price_text">Số lượng:  <span style="color: #262626;"> 100</span></p>
+                                 <p class="price_text">Đã bán:  <span style="color: #262626;"> 10</span></p>
+                                 <div class="tshirt_img"><img src="images/dress-shirt-img.png"></div>
+                                 <div class="see_all">
+                                    <ul>
+                                       <li><a href="#">Xem tất cả</a></li>
+                                    </ul>
+                                 </div>
+                                 <!-- <div class="btn_main">
+                                    <div class="buy_bt"><a href="#">Buy Now</a></div>
+                                    <div class="seemore_bt"><a href="#">See More</a></div>
+                                 </div> -->
+                              </div>
+                           </div>
+                           <div class="col-lg-4 col-sm-4">
+                              <div class="box_main">
+                                 <h4 class="shirt_text">ACC VIP</h4>
+                                 <p class="price_text">Số lượng:  <span style="color: #262626;"> 100</span></p>
+                                 <p class="price_text">Đã bán:  <span style="color: #262626;"> 10</span></p>
+                                 <div class="tshirt_img"><img src="images/women-clothes-img.png"></div>
+                                                             <div class="see_all">
+                                    <ul>
+                                       <li><a href="#">Xem tất cả</a></li>
+                                    </ul>
+                                 </div>
+                                 <!-- <div class="btn_main">
+                                    <div class="buy_bt"><a href="#">Buy Now</a></div>
+                                    <div class="seemore_bt"><a href="#">See More</a></div>
+                                 </div> -->
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="container">
+                     <h1 class="mua_acc_taital">DANH MỤC ACC EFOOTBALL MOBILE 2</h1>
+                     <div class="mua_acc_section_2">
+                        <div class="row">
+                           <div class="col-lg-4 col-sm-4">
+                              <div class="box_main">
+                                 <h4 class="shirt_text">ACC THƯỜNG </h4>
+                                 <p class="price_text">Số lượng:  <span style="color: #262626;"> 100</span></p>
+                                 <p class="price_text">Đã bán:  <span style="color: #262626;"> 10</span></p>
+                                 <div class="tshirt_img"><img src="images/tshirt-img.png"></div>
+                                 <div class="see_all">
+                                    <ul>
+                                       <li><a href="#">Xem tất cả</a></li>
+                                    </ul>
+                                 </div>
+                                 <!-- <div class="btn_main">
+                                    <div class="buy_bt"><a href="#">Buy Now</a></div>
+                                    <div class="seemore_bt"><a href="#">See More</a></div>
+                                 </div> -->
+                              </div>
+                           </div>
+                           <div class="col-lg-4 col-sm-4">
+                              <div class="box_main">
+                                 <h4 class="shirt_text">ACC RANDOM</h4>
+                                 <p class="price_text">Số lượng:  <span style="color: #262626;"> 100</span></p>
+                                 <p class="price_text">Đã bán:  <span style="color: #262626;"> 10</span></p>
+                                 <div class="tshirt_img"><img src="images/dress-shirt-img.png"></div>
+                                 <div class="see_all">
+                                    <ul>
+                                       <li><a href="#">Xem tất cả</a></li>
+                                    </ul>
+                                 </div>
+                                 <!-- <div class="btn_main">
+                                    <div class="buy_bt"><a href="#">Buy Now</a></div>
+                                    <div class="seemore_bt"><a href="#">See More</a></div>
+                                 </div> -->
+                              </div>
+                           </div>
+                           <div class="col-lg-4 col-sm-4">
+                              <div class="box_main">
+                                 <h4 class="shirt_text">ACC VIP</h4>
+                                 <p class="price_text">Số lượng:  <span style="color: #262626;"> 100</span></p>
+                                 <p class="price_text">Đã bán:  <span style="color: #262626;"> 10</span></p>
+                                 <div class="tshirt_img"><img src="images/women-clothes-img.png"></div>
+                                 <div class="see_all">
+                                    <ul>
+                                       <li><a href="#">Xem tất cả</a></li>
+                                    </ul>
+                                 </div>
+                                 <!-- <div class="btn_main">
+                                    <div class="buy_bt"><a href="#">Buy Now</a></div>
+                                    <div class="seemore_bt"><a href="#">See More</a></div>
+                                 </div> -->
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+            <i class="fa fa-angle-left"></i>
+            </a>
+            <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
+            <i class="fa fa-angle-right"></i>
+            </a>
+         </div>
+      </div>
+      <!-- mua_acc section end -->
+      <!-- dichvu section start -->
+      <div class="mua_acc_section">
+         <div id="electronic_main_slider" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <div class="container">
+                     <h1 class="mua_acc_taital">DỊCH VỤ GAME EFOOTBALL MOBILE
+                     </h1>
+                     <div class="mua_acc_section_2">
+                        <div class="row">
+                           <div class="col-lg-4 col-sm-4">
+                              <div class="box_main">
+                                 <h4 class="shirt_text">NẠP COIN</h4>
+                                 <!-- <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p> -->
+                                 <div class="electronic_img"><img src="images/2_anh1.png"></div>
+                                 <div class="see_all">
+                                    <ul>
+                                       <li><a href="#">Xem tất cả</a></li>
+                                    </ul>
+                                 </div>
+                                 <!-- <div class="btn_main">
+                                    <div class="buy_bt"><a href="#">Buy Now</a></div>
+                                    <div class="seemore_bt"><a href="#">See More</a></div>
+                                 </div> -->
+                              </div>
+                           </div>
+                           <div class="col-lg-4 col-sm-4">
+                              <div class="box_main">
+                                 <h4 class="shirt_text">TREO AUTO</h4>
+                                 <!-- <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p> -->
+                                 <div class="electronic_img"><img src="images/2_anh2.png"></div>
+                                 <div class="see_all">
+                                    <ul>
+                                       <li><a href="#">Xem tất cả</a></li>
+                                    </ul>
+                                 </div>
+                                 <!-- <div class="btn_main">
+                                    <div class="buy_bt"><a href="#">Buy Now</a></div>
+                                    <div class="seemore_bt"><a href="#">See More</a></div>
+                                 </div> -->
+                              </div>
+                           </div>
+                           <div class="col-lg-4 col-sm-4">
+                              <div class="box_main">
+                                 <h4 class="shirt_text">CÀY THUÊ DIVISION</h4>
+                                 <!-- <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p> -->
+                                 <div class="electronic_img"><img src="images/2_anh3.png"></div>
+                                 <!-- <div class="btn_main">
+                                    <div class="buy_bt"><a href="#">Buy Now</a></div>
+                                    <div class="seemore_bt"><a href="#">See More</a></div>
+                                 </div> -->
+                                 <div class="see_all">
+                                    <ul>
+                                       <li><a href="#">Xem tất cả</a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="container">
+                     <h1 class="mua_acc_taital">Electronic</h1>
+                     <div class="mua_acc_section_2">
+                        <div class="row">
+                           <div class="col-lg-4 col-sm-4">
+                              <div class="box_main">
+                                 <h4 class="shirt_text">NẠP COIN</h4>
+                                 <!-- <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p> -->
+                                 <div class="electronic_img"><img src="images/2_anh1.png"></div>
+                                 <div class="see_all">
+                                    <ul>
+                                       <li><a href="#">Xem tất cả</a></li>
+                                    </ul>
+                                 </div>
+                                 <!-- <div class="btn_main">
+                                    <div class="buy_bt"><a href="#">Buy Now</a></div>
+                                    <div class="seemore_bt"><a href="#">See More</a></div>
+                                 </div> -->
+                              </div>
+                           </div>
+                           <div class="col-lg-4 col-sm-4">
+                              <div class="box_main">
+                                 <h4 class="shirt_text">TREO AUTO</h4>
+                                 <!-- <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p> -->
+                                 <div class="electronic_img"><img src="images/2_anh2.png"></div>
+                                 <div class="see_all">
+                                    <ul>
+                                       <li><a href="#">Xem tất cả</a></li>
+                                    </ul>
+                                 </div>
+                                 <!-- <div class="btn_main">
+                                    <div class="buy_bt"><a href="#">Buy Now</a></div>
+                                    <div class="seemore_bt"><a href="#">See More</a></div>
+                                 </div> -->
+                              </div>
+                           </div>
+                           <div class="col-lg-4 col-sm-4">
+                              <div class="box_main">
+                                 <h4 class="shirt_text">CÀY THUÊ DIVISION</h4>
+                                 <!-- <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p> -->
+                                 <div class="electronic_img"><img src="images/2_anh3.png"></div>
+                                 <!-- <div class="btn_main">
+                                    <div class="buy_bt"><a href="#">Buy Now</a></div>
+                                    <div class="seemore_bt"><a href="#">See More</a></div>
+                                 </div> -->
+                                 <div class="see_all">
+                                    <ul>
+                                       <li><a href="#">Xem tất cả</a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="container">
+                     <h1 class="mua_acc_taital">Electronic</h1>
+                     <div class="mua_acc_section_2">
+                        <div class="row">
+                           <div class="col-lg-4 col-sm-4">
+                              <div class="box_main">
+                                 <h4 class="shirt_text">NẠP COIN</h4>
+                                 <!-- <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p> -->
+                                 <div class="electronic_img"><img src="images/2_anh1.png"></div>
+                                 <div class="see_all">
+                                    <ul>
+                                       <li><a href="#">Xem tất cả</a></li>
+                                    </ul>
+                                 </div>
+                                 <!-- <div class="btn_main">
+                                    <div class="buy_bt"><a href="#">Buy Now</a></div>
+                                    <div class="seemore_bt"><a href="#">See More</a></div>
+                                 </div> -->
+                              </div>
+                           </div>
+                           <div class="col-lg-4 col-sm-4">
+                              <div class="box_main">
+                                 <h4 class="shirt_text">TREO AUTO</h4>
+                                 <!-- <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p> -->
+                                 <div class="electronic_img"><img src="images/2_anh2.png"></div>
+                                 <div class="see_all">
+                                    <ul>
+                                       <li><a href="#">Xem tất cả</a></li>
+                                    </ul>
+                                 </div>
+                                 <!-- <div class="btn_main">
+                                    <div class="buy_bt"><a href="#">Buy Now</a></div>
+                                    <div class="seemore_bt"><a href="#">See More</a></div>
+                                 </div> -->
+                              </div>
+                           </div>
+                           <div class="col-lg-4 col-sm-4">
+                              <div class="box_main">
+                                 <h4 class="shirt_text">CÀY THUÊ DIVISION</h4>
+                                 <!-- <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p> -->
+                                 <div class="electronic_img"><img src="images/2_anh3.png"></div>
+                                 <!-- <div class="btn_main">
+                                    <div class="buy_bt"><a href="#">Buy Now</a></div>
+                                    <div class="seemore_bt"><a href="#">See More</a></div>
+                                 </div> -->
+                                 <div class="see_all">
+                                    <ul>
+                                       <li><a href="#">Xem tất cả</a></li>
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <a class="carousel-control-prev" href="#electronic_main_slider" role="button" data-slide="prev">
+            <i class="fa fa-angle-left"></i>
+            </a>
+            <a class="carousel-control-next" href="#electronic_main_slider" role="button" data-slide="next">
+            <i class="fa fa-angle-right"></i>
+            </a>
+         </div>
+      </div>
+      <!-- electronic section end -->
+      <!-- jewellery  section start -->
+      <div class="jewellery_section">
+         <div id="jewellery_main_slider" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <div class="container">
+                     <h1 class="mua_acc_taital">Tin Tức</h1>
+                     <div class="mua_acc_section_2">
+                        <div class="row">
+                           <div class="col-lg-4 col-sm-4">
+                              <div class="box_main">
+                                 <h4 class="shirt_text">Jumkas</h4>
+                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
+                                 <div class="jewellery_img"><img src="images/jhumka-img.png"></div>
+                                 <div class="btn_main">
+                                    <div class="buy_bt"><a href="#">Buy Now</a></div>
+                                    <div class="seemore_bt"><a href="#">See More</a></div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-lg-4 col-sm-4">
+                              <div class="box_main">
+                                 <h4 class="shirt_text">Necklaces</h4>
+                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
+                                 <div class="jewellery_img"><img src="images/neklesh-img.png"></div>
+                                 <div class="btn_main">
+                                    <div class="buy_bt"><a href="#">Buy Now</a></div>
+                                    <div class="seemore_bt"><a href="#">See More</a></div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-lg-4 col-sm-4">
+                              <div class="box_main">
+                                 <h4 class="shirt_text">Kangans</h4>
+                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
+                                 <div class="jewellery_img"><img src="images/kangan-img.png"></div>
+                                 <div class="btn_main">
+                                    <div class="buy_bt"><a href="#">Buy Now</a></div>
+                                    <div class="seemore_bt"><a href="#">See More</a></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="container">
+                     <h1 class="mua_acc_taital">Tin Tức</h1>
+                     <div class="mua_acc_section_2">
+                        <div class="row">
+                           <div class="col-lg-4 col-sm-4">
+                              <div class="box_main">
+                                 <h4 class="shirt_text">Jumkas</h4>
+                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
+                                 <div class="jewellery_img"><img src="images/jhumka-img.png"></div>
+                                 <div class="btn_main">
+                                    <div class="buy_bt"><a href="#">Buy Now</a></div>
+                                    <div class="seemore_bt"><a href="#">See More</a></div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-lg-4 col-sm-4">
+                              <div class="box_main">
+                                 <h4 class="shirt_text">Necklaces</h4>
+                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
+                                 <div class="jewellery_img"><img src="images/neklesh-img.png"></div>
+                                 <div class="btn_main">
+                                    <div class="buy_bt"><a href="#">Buy Now</a></div>
+                                    <div class="seemore_bt"><a href="#">See More</a></div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-lg-4 col-sm-4">
+                              <div class="box_main">
+                                 <h4 class="shirt_text">Kangans</h4>
+                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
+                                 <div class="jewellery_img"><img src="images/kangan-img.png"></div>
+                                 <div class="btn_main">
+                                    <div class="buy_bt"><a href="#">Buy Now</a></div>
+                                    <div class="seemore_bt"><a href="#">See More</a></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="container">
+                     <h1 class="mua_acc_taital">Tin Tức</h1>
+                     <div class="mua_acc_section_2">
+                        <div class="row">
+                           <div class="col-lg-4 col-sm-4">
+                              <div class="box_main">
+                                 <h4 class="shirt_text">Jumkas</h4>
+                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
+                                 <div class="jewellery_img"><img src="images/jhumka-img.png"></div>
+                                 <div class="btn_main">
+                                    <div class="buy_bt"><a href="#">Buy Now</a></div>
+                                    <div class="seemore_bt"><a href="#">See More</a></div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-lg-4 col-sm-4">
+                              <div class="box_main">
+                                 <h4 class="shirt_text">Necklaces</h4>
+                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
+                                 <div class="jewellery_img"><img src="images/neklesh-img.png"></div>
+                                 <div class="btn_main">
+                                    <div class="buy_bt"><a href="#">Buy Now</a></div>
+                                    <div class="seemore_bt"><a href="#">See More</a></div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-lg-4 col-sm-4">
+                              <div class="box_main">
+                                 <h4 class="shirt_text">Kangans</h4>
+                                 <p class="price_text">Start Price  <span style="color: #262626;">$ 100</span></p>
+                                 <div class="jewellery_img"><img src="images/kangan-img.png"></div>
+                                 <div class="btn_main">
+                                    <div class="buy_bt"><a href="#">Buy Now</a></div>
+                                    <div class="seemore_bt"><a href="#">See More</a></div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <a class="carousel-control-prev" href="#jewellery_main_slider" role="button" data-slide="prev">
+            <i class="fa fa-angle-left"></i>
+            </a>
+            <a class="carousel-control-next" href="#jewellery_main_slider" role="button" data-slide="next">
+            <i class="fa fa-angle-right"></i>
+            </a>
+            <div class="loader_main">
+               <div class="loader"></div>
+            </div>
+         </div>
+      </div>
+      <!-- jewellery  section end -->
+      <!-- footer section start -->
+      <div class="footer_section layout_padding">
+         <div class="footer_menu">
+        <div class="row">
+          <div class="col-md-3 col-sm-12">
+            <h4>Về chúng tôi</h4>
+            <p>Webnick là một trong những website cung cấp tài khoản game, phần mềm, combo tài khoản uy tín và chất lượng hàng đầu Việt Nam.</p>
+            <p><i class="fa fa-phone-alt"></i> Gọi ngay: <a href="tel:+84396812345">+84 396 812 345</a></p>
+            <p><i class="fa fa-envelope"></i> Email: <a href="mailto:contact@webnick.vn">contact@webnick.vn</a></p>
+          </div>
+          <div class="col-md-3 col-sm-12">
+            <h4>Danh mục sản phẩm</h4>
+            <ul class>
+              <li><a href="#">- Trang Chủ</a></li>
+              <li><a href="#">- Mua Acc</a></li>
+              <li><a href="#">- Dịch Vụ</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3 col-sm-12">
+            <h4>Hỗ trợ khách hàng</h4>
+            <ul>
+              <li><a href="#">- Hướng dẫn mua hàng</a></li>
+              <li><a href="#">- Điều khoản sử dụng</a></li>
+              <li><a href="#">- Chính sách bảo mật</a></li>
+            </ul>
+        </div>
+        <div class="col-md-3 col-sm-12">
+          <h4>Theo dõi chúng tôi</h4>
+          <ul class="social-icons">
+            <li><a href="#"><i class="fa fa-facebook-f"></i>Facebook</a></li>
+            <li><a href="#"><i class="fa fa-instagram"></i>Instagram</a></li>
+            <li><a href="#"><i class="fa fa-twitter"></i>Twitter</a></li>
+          </ul>
+        </div>
+      </div>
+      </div>
+      <!-- footer section end -->
+      <!-- copyright section start -->
+      <div class="copyright_section">
+         <div class="container">
+            <p class="copyright_text">© 2023 All Rights Reserved. Design by <a href="https://html.design">Team nine</a></p>
+         </div>
+      </div>
+      <!-- copyright section end -->
+      <!-- Javascript files-->
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/plugin.js"></script>
+      <script src="js/login.js"></script>
+      <!-- sidebar -->
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <script>
+         function openNav() {
+           document.getElementById("mySidenav").style.width = "250px";
+         }
+         
+         function closeNav() {
+           document.getElementById("mySidenav").style.width = "0";
+         }
+      </script>
+   </body>
+</html>
