@@ -780,6 +780,7 @@ header .header-right .hamburger div {
 }
 
 .switch-buttons {
+    margin-top: 12px;
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
@@ -847,18 +848,95 @@ form button:hover {
   }
   
 .modal-content {
-background-color: #fff;
+background-color: #79a8b7ed;
 margin: 10% auto;
 padding: 20px;
 max-width: 600px;
-border-radius: 5px;
+border-radius: 21px;
+}
+.modal-content h3 {
+    color: #000;
+    font-weight: bold;
+}
+.modal-content p {  
+    color: #000;
+    font-weight: bold;
 }
 
 .close {
     position: absolute;
-    top: -2px;
-    right: 0px;
-    font-size: 27px;
+    top: 2px;
+    right: 2px;
+    font-size: 0px; 
     font-weight: bold;
-    color: #ee0707;
+    color: #e71010;
+    background-color: #000;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .close:hover {
+    background-color: #ee0707;
+    transform: rotate(360deg);
+  }
+  
+  .close::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 3px;
+    background-color: #fff;
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  
+  .close::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 3px;
+    background-color: #fff;
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  
+
+/* //// */
+ .link{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    padding-top: 0px;
+    text-align: center;
+}
+.link a{
+    text-decoration: none;
+    color: #ff7200;
+}
+
+.liw{
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.icons {
+    text-align: center;
+}
+.icons a{
+    text-decoration: none;
+    color: #fff;
+}
+.icons ion-icon{
+    color: #09e714;
+    font-size: 30px;
+    padding-left: 14px;
+    padding-top: 5px;
+    transition: 0.3s ease;
+}
+.icons ion-icon:hover{
+    color: #ff7200;
 }
