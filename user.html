@@ -16,8 +16,7 @@
       <!-- bootstrap css -->
       <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
       <!-- style css -->
-      <link rel="stylesheet" type="text/css" href="css/style.css">
-      <link rel="stylesheet" type="text/css" href="header.css" />
+      <link rel="stylesheet" type="text/css" href="style1.css">
 
       <!-- Responsive-->
       <link rel="stylesheet" href="css/responsive.css">
@@ -41,108 +40,63 @@
    <body>
     <!-- header start-->
     <div class="banner_bg_main">
-      <div class="pheader">
-         <div class="pheader-container">
-         <div class="pheader-left">
-            <div class="pheader-brand">
-               <a aria-current="page" href="/overview">
-               <img src="path/to/image.png" alt="Logo shop acc" />
-               </a>
-            </div>
-         </div>
-         <div class="pheader-nav">
-            <a aria-current="page" class="nav-item active" href="uindex.html">Trang Chủ</a>
-            <a class="nav-item" href="#">Sản Phẩm</a>
-            <a class="nav-item" href="#" id = "nap-tien-link">Nạp Tiền</a>
-            <a class="nav-item" href="#" id ="myBtn2">Dịch Vụ</a>
-            <a class="nav-item" href="#">Tin Tức</a>
-            <a class="nav-item" href="#">Hỗ Trợ</a>
-         </div>
-         <div class="pheader-right">
-               <div class="pheader-menu pheader-menu-desktop">
-               <div class="pheader-menu-desktop-auth">
-                  <a class="nav-item" role="button" href="user.html" id="infoBtn"></a>
-                  <a class="nav-item" role="button" href= "index.html" id="signoutBtn">Sign out</a>
-  
+      <header>
+         <div class="header-left">
+             <div class="logo">
+                 <img src="./logo.png" alt="">
+             </div>
+             <nav>
+                 <ul>
+                     <li><a class="active"href="uindex.html">Trang Chủ</a>
+                     </li>
+                     <li><a  href="#">Sản Phẩm</a>
+                     </li>
+                     <li><a href="#" id = "nap-tien-link">Nạp Tiền</a>
+                     </li>
+                     <li><a  href="#"id ="myBtn2">Dịch Vụ</a>
+                     </li>
+                     <li><a  href="#">Tin Tức</a>
+                     </li>
+                     <li><a  href="#">Hỗ Trợ</a>
+                     </li>
+                 </ul>
+                 <div class="login-signup">
+                  <a  href="user.html" id="info"></a>
+                  <a  href= "index.html" >Sign out</a>
                   <script>
-                      // Lấy giá trị từ localStorage
-                      const username = localStorage.getItem('username');
-  
-                      // Hiển thị giá trị trong thẻ div
-                      const loginBtn = document.getElementById('infoBtn');
-                      loginBtn.textContent = username;
-                  </script>               </div>
-               </div>
-            <style>
-               /* Khai báo chung cho cả 2 button */   
-               .nav-item {
-                  cursor: pointer;
-                  padding: 8px 12px;
-                  border-radius: 4px;
-                  color: #fff;
-                  text-align: center;
-               }
-
-               /* Màu cho button Login */
-               #infoBtn {
-                  background-color: #007bff;
-               }
-
-               /* Màu cho button Sign up */
-               #signoutBtn {
-                  background-color: transparent;
-                  border: 1px solid #28a745;
-               }
-
-               /* Khi hover vào button Sign up */
-               #signoutBtn:hover {
-                  background-color: #28a745;
-               }
-
-               /* Khi active (click) vào button Sign up */
-               #signoutBtn:active {
-                  background-color: #1e7e34;
-               }
-            </style>
-
-            <script>
-               // Bắt sự kiện click vào button Sign up để thay đổi kiểu hiển thị
-               document.getElementById("signupBtn").addEventListener("click", function() {
-                  // Xóa class 'btn-primary' và thêm class 'btn-success'
-                  this.classList.remove("btn-primary");
-                  this.classList.add("btn-success");
-
-                  // Thay đổi nội dung của button
-                  document.getElementById("signupLabel").textContent = "Logged in";
-               });
-            </script>
+                     const un = localStorage.getItem("current_login");
+                     // Hiển thị giá trị trong thẻ div
+                     const loginBtn_ = document.getElementById("info");
+                     loginBtn_.textContent = un;
+                  </script>  
+                  </div>
+             </nav>
+         </div>
+         <div class="header-right">
+             <div class="login-signup">
+               <a  href="user.html" id="infoBtn"></a>
+               <a  href= "index.html" id="signoutBtn">Sign out</a>
                <script>
-                  const loginBtn = document.getElementById('loginBtn');
-                  const signupBtn = document.getElementById('signupBtn');
-                  
-                  loginBtn.addEventListener('click', function() {
-                    loginBtn.classList.remove('nav-item-default');
-                    loginBtn.classList.add('nav-item-active');
-                  
-                    signupBtn.classList.remove('nav-item-active');
-                    signupBtn.classList.add('nav-item-default');
-                  });
-                  
-                  signupBtn.addEventListener('click', function() {
-                    signupBtn.classList.remove('nav-item-default');
-                    signupBtn.classList.add('nav-item-active');
-                  
-                    loginBtn.classList.remove('nav-item-active');
-                    loginBtn.classList.add('nav-item-default');
-                  });
-               </script>
-               <div class="pheader-mobile-toggle" role="button">
-               <!-- Keep this placeholder for future development on mobile -->
-            </div>
-         </div>          
-      </div>
-      </div>
-   
+                  const username = localStorage.getItem("current_login");
+                  // Hiển thị giá trị trong thẻ div
+                  const loginBtn = document.getElementById("infoBtn");
+                  loginBtn.textContent = username;
+               </script>                 
+          </div>
+             <div class="hamburger">
+                 <div></div>
+                 <div></div>
+                 <div></div>
+             </div>
+         </div>
+     </header>
+     <script>
+         hamburger = document.querySelector(".hamburger");
+         nav = document.querySelector("nav");
+         hamburger.onclick = function() {
+             nav.classList.toggle("active");
+         }
+     </script>
       <!-- banner section start -->
       <div class="banner_section layout_padding">
          <div class="container">
@@ -151,6 +105,7 @@
                   <div class="carousel-item active">
                      <div class="row">
                         <div class="col-sm-12">
+                           <h1 class="banner_taital">Get Start <br>Your favriot shoping1</h1>
                            <div class="buynow_bt"><a href="#">Buy Now</a></div>
                         </div>
                      </div>
@@ -158,6 +113,7 @@
                   <div class="carousel-item">
                      <div class="row">
                         <div class="col-sm-12">
+                           <h1 class="banner_taital">Get Start <br>Your favriot shoping2</h1>
                            <div class="buynow_bt"><a href="#">Buy Now</a></div>
                         </div>
                      </div>
@@ -165,9 +121,10 @@
                   <div class="carousel-item">
                      <div class="row">
                         <div class="col-sm-12">
+                           <h1 class="banner_taital">Get Start <br>Your favriot shoping3</h1>
                            <div class="buynow_bt"><a href="#">Buy Now</a></div>
                         </div>
-                     </div>
+                     </div>      
                   </div>
                </div>
                <a class="carousel-control-prev" href="#my_slider" role="button" data-slide="prev">
@@ -179,8 +136,9 @@
             </div>
          </div>
       </div>
-         <!-- banner section end -->   
+        <!-- banner section end -->   
    </div>  
+    <!-- header end -->
 
 
    <div class="col-md-13">
@@ -368,7 +326,7 @@
       <script src="js/popper.min.js"></script>
       <script src="js/bootstrap.bundle.min.js"></script>
       <script src="js/jquery-3.0.0.min.js"></script>
-      <script src="js/plugin.js"></script>
+      <!-- <script src="js/plugin.js"></script> -->
       <script src="js/login.js"></script>
       <!-- sidebar -->
       <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>

@@ -1,15 +1,6 @@
 /*--------------------------------------------------------------------- File Name: responsive.css ---------------------------------------------------------------------*/
 
 
-/*------------------------------------------------------------------- 991px x 768px ---------------------------------------------------------------------*/
-
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-    .header-search {
-        padding: 15px 0px;
-    }
-}
-
-
 /*------------------------------------------------------------------- 767px x 599px ---------------------------------------------------------------------*/
 
 @media only screen and (min-width: 599px) and (max-width: 767px) {
@@ -133,7 +124,7 @@
     }
     .tshirt_img {
         margin: 20px 0px;
-        min-height: 360px;
+        min-height: 200px;
     }
     #main_slider a.carousel-control-next {
         right: 40px;
@@ -181,7 +172,7 @@
     }
     .tshirt_img {
         margin: 20px 0px;
-        min-height: 320px;
+        min-height: 145px;
     }
     .banner_taital {
         font-size: 50px;
@@ -292,7 +283,7 @@
     }
     .tshirt_img {
         margin: 20px 0px;
-        min-height: 246px;
+        min-height: 145px;
     }
     .jewellery_img {
         margin: 20px 0px;
@@ -463,5 +454,42 @@
     }
     .location_main {
         padding: 30px 0px 30px 0px;
+    }
+}
+@media only screen and (max-width: 1000px) {
+    header {
+        padding: 0 20px;
+    }
+    header .header-right .hamburger {
+        display: block;
+    }
+    header .header-left nav {
+        margin: 0;
+        position: absolute;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: fit-content;
+        background-color: #0b2239;
+        padding: 30px;
+        transition: 0.3s;
+        text-align: center;
+        z-index: 1;
+    }
+    header .header-left nav.active {
+        top: 70px;
+        z-index: 12;
+    }
+    header .header-left nav ul {
+        display: block;
+    }
+}
+@media only screen and (max-width: 500px) {
+    nav .login-signup {
+        display: block;
+        margin-top: 20px;
+    }
+    header .header-right .login-signup {
+        display: none;
     }
 }
