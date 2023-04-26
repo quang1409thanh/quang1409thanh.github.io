@@ -56,9 +56,48 @@
     <div class="banner_bg_main">
       <header>
         <div class="header-left">
-          <div class="logo">
-            <img src="./logo.png" alt="" />
+          <div id="parent-container">
+            <div id="video-container">
+              <img src="hi.gif" alt="GIF image" />
+            </div>
+            <div id="overlay"></div>
           </div>
+
+          <style>
+            #parent-container {
+              position: fixed;
+              width: 230px;
+              height: 170px;
+              top: 0;
+              left: 0;
+              z-index: 9999; /* Sử dụng một số lớn hơn tất cả các phần tử khác để giữ ảnh gif luôn ở trên cùng */
+            }
+
+            #video-container {
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              overflow: hidden;
+            }
+
+            #video-container img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+
+            #overlay {
+              position: absolute;
+              top: 0;
+              left: 0;
+              opacity: 0.5;
+              width: 100%;
+              height: 100%;
+              z-index: -1; /* Đặt z-index bé hơn để giữ cho overlay nằm dưới ảnh gif */
+            }
+          </style>
           <nav>
             <ul>
               <li><a class="active" href="index.html">Trang Chủ</a></li>
@@ -1118,66 +1157,69 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-  <!-- CHAT BAR BLOCK -->
-  <div class="chat-bar-collapsible">
-    <button id="chat-button" type="button" class="collapsible">
-      Chat with us!
-      <i id="chat-icon" style="color: #fff" class="fa fa-fw fa-comments-o"></i>
-    </button>
+    <!-- CHAT BAR BLOCK -->
+    <div class="chat-bar-collapsible">
+      <button id="chat-button" type="button" class="collapsible">
+        Chat with us!
+        <i
+          id="chat-icon"
+          style="color: #fff"
+          class="fa fa-fw fa-comments-o"
+        ></i>
+      </button>
 
-    <div class="content">
-      <div class="full-chat-block">
-        <!-- Message Container -->
-        <div class="outer-container">
-          <div class="chat-container">
-            <!-- Messages -->
-            <div id="chatbox">
-              <h5 id="chat-timestamp"></h5>
-              <p id="botStarterMessage" class="botText">
-                <span>Loading...</span>
-              </p>
-            </div>
+      <div class="content">
+        <div class="full-chat-block">
+          <!-- Message Container -->
+          <div class="outer-container">
+            <div class="chat-container">
+              <!-- Messages -->
+              <div id="chatbox">
+                <h5 id="chat-timestamp"></h5>
+                <p id="botStarterMessage" class="botText">
+                  <span>Loading...</span>
+                </p>
+              </div>
 
-            <!-- User input box -->
-            <div class="chat-bar-input-block">
-              <div id="userInput">
-                <input
-                  id="textInput"
-                  class="input-box"
-                  type="text"
-                  name="msg"
-                  placeholder="Tap 'Enter' to send a message"
-                />
+              <!-- User input box -->
+              <div class="chat-bar-input-block">
+                <div id="userInput">
+                  <input
+                    id="textInput"
+                    class="input-box"
+                    type="text"
+                    name="msg"
+                    placeholder="Tap 'Enter' to send a message"
+                  />
+                  <p></p>
+                </div>
+
+                <div class="chat-bar-icons">
+                  <i
+                    id="chat-icon"
+                    style="color: crimson"
+                    class="fa fa-fw fa-heart"
+                    onclick="heartButton()"
+                  ></i>
+                  <i
+                    id="chat-icon"
+                    style="color: #333"
+                    class="fa fa-fw fa-send"
+                    onclick="sendButton()"
+                  ></i>
+                </div>
+              </div>
+
+              <div id="chat-bar-bottom">
                 <p></p>
               </div>
-
-              <div class="chat-bar-icons">
-                <i
-                  id="chat-icon"
-                  style="color: crimson"
-                  class="fa fa-fw fa-heart"
-                  onclick="heartButton()"
-                ></i>
-                <i
-                  id="chat-icon"
-                  style="color: #333"
-                  class="fa fa-fw fa-send"
-                  onclick="sendButton()"
-                ></i>
-              </div>
-            </div>
-
-            <div id="chat-bar-bottom">
-              <p></p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="js/responses.js"></script>
-  <script src="js/chat.js"></script>
-</body>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/responses.js"></script>
+    <script src="js/chat.js"></script>
+  </body>
 </html>

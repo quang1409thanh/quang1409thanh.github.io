@@ -1,0 +1,40 @@
+<div id="parent-container">
+  <div id="video-container">
+    <img src="hi-unscreen.gif" alt="gif image" />
+  </div>
+  <div id="overlay"></div>
+  <div id="object"></div>
+</div>
+<style>
+#parent-container {
+  position: fixed;
+  width: 100px;
+  height: 160px;
+  top: 0;
+  left: 0;
+}
+
+#video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#video-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+}
+</style>
