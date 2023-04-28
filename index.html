@@ -56,9 +56,12 @@
     <div class="banner_bg_main">
       <header>
         <div class="header-left">
-          <div class="logo">
-            <img src="./logo.png" alt="" />
-          </div>
+          <div id="parent-container">
+            <div id="video-container">
+                <img src="hi.gif" alt="GIF image" />
+            </div>
+            <div id="overlay"></div>
+        </div>
           <nav>
             <ul>
               <li><a class="active" href="index.html">Trang Chủ</a></li>
@@ -203,6 +206,10 @@
             required
           />
           <input type="password" placeholder="Xác nhận mật khẩu" required />
+          <label>
+            <h4>Làm cộng tác viên ?</h4>
+            <input type="checkbox" name="isCollaborator" value="true" />
+          </label>
           <button type="submit">Đăng ký</button>
         </form>
         <!-- end login -->
@@ -231,6 +238,7 @@
         <div class="switch-buttons">
           <button class="active" id="register-button_">Đăng ký</button>
           <button id="login-button_">Đăng nhập</button>
+          
         </div>
         <form id="login-form_" style="display: none">
           <input
@@ -245,6 +253,18 @@
             placeholder="Mật khẩu"
             required
           />
+          <p class="link">
+            <br />
+            <a href="#">Quên mật khẩu ?</a>
+          </p>
+          <div class="icons">
+            <p class="liw">Log in with</p>
+            <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-google"></ion-icon></a>
+            <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+          </div>
           <button type="submit">Đăng nhập</button>
         </form>
         <form id="register-form_">
@@ -262,6 +282,10 @@
             required
           />
           <input type="password" placeholder="Xác nhận mật khẩu" required />
+          <label>
+            <h4>Làm cộng tác viên ?</h4>
+            <input type="checkbox" name="isCollaborator" value="true" />
+          </label>
           <button type="submit">Đăng ký</button>
         </form>
         <!-- end login -->
@@ -1118,66 +1142,69 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-  <!-- CHAT BAR BLOCK -->
-  <div class="chat-bar-collapsible">
-    <button id="chat-button" type="button" class="collapsible">
-      Chat with us!
-      <i id="chat-icon" style="color: #fff" class="fa fa-fw fa-comments-o"></i>
-    </button>
+    <!-- CHAT BAR BLOCK -->
+    <div class="chat-bar-collapsible">
+      <button id="chat-button" type="button" class="collapsible">
+        Chat with us!
+        <i
+          id="chat-icon"
+          style="color: #fff"
+          class="fa fa-fw fa-comments-o"
+        ></i>
+      </button>
 
-    <div class="content">
-      <div class="full-chat-block">
-        <!-- Message Container -->
-        <div class="outer-container">
-          <div class="chat-container">
-            <!-- Messages -->
-            <div id="chatbox">
-              <h5 id="chat-timestamp"></h5>
-              <p id="botStarterMessage" class="botText">
-                <span>Loading...</span>
-              </p>
-            </div>
+      <div class="content">
+        <div class="full-chat-block">
+          <!-- Message Container -->
+          <div class="outer-container">
+            <div class="chat-container">
+              <!-- Messages -->
+              <div id="chatbox">
+                <h5 id="chat-timestamp"></h5>
+                <p id="botStarterMessage" class="botText">
+                  <span>Loading...</span>
+                </p>
+              </div>
 
-            <!-- User input box -->
-            <div class="chat-bar-input-block">
-              <div id="userInput">
-                <input
-                  id="textInput"
-                  class="input-box"
-                  type="text"
-                  name="msg"
-                  placeholder="Tap 'Enter' to send a message"
-                />
+              <!-- User input box -->
+              <div class="chat-bar-input-block">
+                <div id="userInput">
+                  <input
+                    id="textInput"
+                    class="input-box"
+                    type="text"
+                    name="msg"
+                    placeholder="Tap 'Enter' to send a message"
+                  />
+                  <p></p>
+                </div>
+
+                <div class="chat-bar-icons">
+                  <i
+                    id="chat-icon"
+                    style="color: crimson"
+                    class="fa fa-fw fa-heart"
+                    onclick="heartButton()"
+                  ></i>
+                  <i
+                    id="chat-icon"
+                    style="color: #333"
+                    class="fa fa-fw fa-send"
+                    onclick="sendButton()"
+                  ></i>
+                </div>
+              </div>
+
+              <div id="chat-bar-bottom">
                 <p></p>
               </div>
-
-              <div class="chat-bar-icons">
-                <i
-                  id="chat-icon"
-                  style="color: crimson"
-                  class="fa fa-fw fa-heart"
-                  onclick="heartButton()"
-                ></i>
-                <i
-                  id="chat-icon"
-                  style="color: #333"
-                  class="fa fa-fw fa-send"
-                  onclick="sendButton()"
-                ></i>
-              </div>
-            </div>
-
-            <div id="chat-bar-bottom">
-              <p></p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="js/responses.js"></script>
-  <script src="js/chat.js"></script>
-</body>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/responses.js"></script>
+    <script src="js/chat.js"></script>
+  </body>
 </html>
