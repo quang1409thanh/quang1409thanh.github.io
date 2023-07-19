@@ -1,0 +1,17 @@
+/* style.css */
+
+/* Căn giữa trang */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  /* Tạo khoảng cách cho input và button */
+  form {
+    display: flex;
+    gap: 10px;
+  }
+  
