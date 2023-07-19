@@ -1,17 +1,100 @@
-/* style.css */
-
-/* Căn giữa trang */
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  padding-top: 100px;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(236, 6, 217, 0.192);
+}
+h1 {
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px;
+}
+h3 {
+  padding: 10px;
+}
+
+form {
+  display: flex;
+  margin: 20px auto;
+  max-width: 30%;
+}
+
+
+input[type="search"] {
+  flex-grow: 1;
+  padding: 10px;
+  border: slateblue solid 1px;
+}
+
+button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: slateblue solid 1px;
+
+}
+
+button:hover {
+  background-color: #08bdd4;
+}
+
+
+table {
+  border-collapse: collapse;
+  max-width: 100%;
+  margin: 0 auto;
+}
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+th {
+  background-color: #4CAF50;
+  color: white;
+}
+th, td {
+  text-align: left;
+  padding: 8px;
+  border: 1px solid black;
+}
+@media (max-width: 600px) {
+  body {
+    padding-top: 0;
+  }
+
+  h1 {
     margin: 0;
+    font-size: 20px;
+    text-align: center;
   }
-  
-  /* Tạo khoảng cách cho input và button */
+
   form {
-    display: flex;
-    gap: 10px;
+    max-width: 70%;
+    flex-direction: column;
+    align-items: center;
+
   }
-  
+
+  input[type="search"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  table {
+    max-width: 100%;
+    margin: 0 auto;
+    font-size: 14px;
+  }
+}

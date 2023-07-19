@@ -16,9 +16,11 @@ checkButton.addEventListener("click", () => {
 });
 
 // Hàm thực hiện kiểm tra và hiển thị kết quả
+// Hàm thực hiện kiểm tra và hiển thị kết quả
 function performCheck() {
     const soBaoDanh = searchInput.value;
-
+    let dots = ' ...';
+    resultContainer.innerHTML = `<p>Xin vui lòng chờ trong giây lát${dots}</p>`;
     getMockData(soBaoDanh, function (data) {
         displayResult(data);
     });
@@ -26,21 +28,40 @@ function performCheck() {
 
 // Hàm hiển thị kết quả
 function displayResult(data) {
+
     if (typeof data === 'string') {
         resultContainer.innerHTML = `<p>${data}</p>`;
     } else {
-        resultContainer.innerHTML = `
-            <p>SBD: ${data.sbd}</p>
-            <p>Toán: ${data.toan}</p>
-            <p>Ngữ Văn: ${data.ngu_van}</p>
-            <p>Ngoại Ngữ: ${data.ngoai_ngu}</p>
-            <p>Vật Lý: ${data.vat_li}</p>
-            <p>Hóa Học: ${data.hoa_hoc}</p>
-            <p>Sinh Học: ${data.sinh_hoc}</p>
-            <p>Lịch Sử: ${data.lich_su}</p>
-            <p>Địa Lý: ${data.dia_li}</p>
-            <p>GDCD: ${data.gdcd}</p>
+        const mon = {
+            toan: 'Toán',
+            ngu_van: 'Ngữ Văn',
+            ngoai_ngu: 'Ngoại Ngữ',
+            vat_li: 'Vật Lý',
+            hoa_hoc: 'Hóa Học',
+            sinh_hoc: 'Sinh Học',
+            lich_su: 'Lịch Sử',
+            dia_li: 'Địa Lý',
+            gdcd: 'GDCD'
+        }
+        let info = data.khoi_thi_max.info.map(x => mon[x]).join(', ');
+        let html = `
+            <h3>  Kết quả của bạn là: </h3>
+            <table>
+                <tr><th>SBD</th><td>${data.sbd}</td></tr>
+                ${!isNaN(data.toan) ? `<tr><th>Toán</th><td>${data.toan}</td></tr>` : ''}
+                ${!isNaN(data.ngu_van) ? `<tr><th>Ngữ Văn</th><td>${data.ngu_van}</td></tr>` : ''}
+                ${!isNaN(data.ngoai_ngu) ? `<tr><th>Ngoại Ngữ</th><td>${data.ngoai_ngu}</td></tr>` : ''}
+                ${!isNaN(data.vat_li) ? `<tr><th>Vật Lý</th><td>${data.vat_li}</td></tr>` : ''}
+                ${!isNaN(data.hoa_hoc) ? `<tr><th>Hóa Học</th><td>${data.hoa_hoc}</td></tr>` : ''}
+                ${!isNaN(data.sinh_hoc) ? `<tr><th>Sinh Học</th><td>${data.sinh_hoc}</td></tr>` : ''}
+                ${!isNaN(data.lich_su) ? `<tr><th>Lịch Sử</th><td>${data.lich_su}</td></tr>` : ''}
+                ${!isNaN(data.dia_li) ? `<tr><th>Địa Lý</th><td>${data.dia_li}</td></tr>` : ''}
+                ${!isNaN(data.gdcd) ? `<tr><th>GDCD</th><td>${data.gdcd}</td></tr>` : ''}
+                ${!isNaN(data.tong) ? `<tr><th>Tổng Điểm</th><td>${data.tong}</td></tr>` : ''}
+                ${!isNaN(data.khoi_thi_max.diem) ? `<tr><th>Khối thi cao nhất</th><td>${info}: ${data.khoi_thi_max.diem}đ</td></tr>` : ''}
+            </table>
         `;
+        resultContainer.innerHTML = html;
     }
 }
 
@@ -50,26 +71,66 @@ function getMockData(soBaoDanh, callback) {
         const student = studentsData.find((studentData) => studentData.sbd === soBaoDanh);
 
         if (student) {
+            const diem = {
+                toan: parseFloat(student.toan),
+                ngu_van: parseFloat(student.ngu_van),
+                ngoai_ngu: parseFloat(student.ngoai_ngu),
+                vat_li: parseFloat(student.vat_li),
+                hoa_hoc: parseFloat(student.hoa_hoc),
+                sinh_hoc: parseFloat(student.sinh_hoc),
+                lich_su: parseFloat(student.lich_su),
+                dia_li: parseFloat(student.dia_li),
+                gdcd: parseFloat(student.gdcd)
+            };
+
+            let max_3_mon = 0;
+            let mon_1 = '', mon_2 = '', mon_3 = '';
+            for (let i in diem) {
+                for (let j in diem) {
+                    for (let k in diem) {
+                        if (i !== j && i !== k && j !== k && !isNaN(diem[i]) && !isNaN(diem[j]) && !isNaN(diem[k])) {
+                            if (diem[i] + diem[j] + diem[k] > max_3_mon) {
+                                max_3_mon = diem[i] + diem[j] + diem[k];
+                                mon_1 = i;
+                                mon_2 = j;
+                                mon_3 = k;
+                            }
+                        }
+                    }
+                }
+            }
+
+            let tong_diem = 0;
+            for (let i in diem) {
+                if (!isNaN(diem[i])) tong_diem += diem[i];
+            }
+            const max_3 = new khoi_thi_max(
+                max_3_mon,
+                [mon_1, mon_2, mon_3]
+            )
             const studentResult = new StudentResult(
                 student.sbd,
-                parseFloat(student.toan),
-                parseFloat(student.ngu_van),
-                parseFloat(student.ngoai_ngu),
-                parseFloat(student.vat_li),
-                parseFloat(student.hoa_hoc),
-                parseFloat(student.sinh_hoc),
-                parseFloat(student.lich_su),
-                parseFloat(student.dia_li),
-                parseFloat(student.gdcd),
-                student.ma_ngoai_ngu
+                diem.toan,
+                diem.ngu_van,
+                diem.ngoai_ngu,
+                diem.vat_li,
+                diem.hoa_hoc,
+                diem.sinh_hoc,
+                diem.lich_su,
+                diem.dia_li,
+                diem.gdcd,
+                student.ma_ngoai_ngu,
+                tong_diem,
+                max_3
             );
 
-            callback((studentResult));
+            callback(studentResult);
         } else {
             callback("Không tìm thấy dữ liệu cho số báo danh này.");
         }
     });
 }
+
 
 
 function processFile(url, callback) {
@@ -85,8 +146,15 @@ function processFile(url, callback) {
 
 // main.js
 // Định nghĩa class với các thuộc tính tương ứng
+
+class khoi_thi_max {
+    constructor(diem, info) {
+        this.diem = diem;
+        this.info = info;
+    }
+}
 class StudentResult {
-    constructor(sbd, toan, ngu_van, ngoai_ngu, vat_li, hoa_hoc, sinh_hoc, lich_su, dia_li, gdcd, ma_ngoai_ngu) {
+    constructor(sbd, toan, ngu_van, ngoai_ngu, vat_li, hoa_hoc, sinh_hoc, lich_su, dia_li, gdcd, ma_ngoai_ngu, tong, khoi_thi_max) {
         this.sbd = sbd;
         this.toan = toan;
         this.ngu_van = ngu_van;
@@ -98,6 +166,8 @@ class StudentResult {
         this.dia_li = dia_li;
         this.gdcd = gdcd;
         this.ma_ngoai_ngu = ma_ngoai_ngu;
+        this.tong = tong;
+        this.khoi_thi_max = khoi_thi_max;
     }
 
 }
@@ -138,7 +208,6 @@ function createStudents(dataArray) {
             parseFloat(data["lich_su"]),
             parseFloat(data["dia_li"]),
             parseFloat(data["gdcd"]),
-            data["ma_ngoai_ngu"]
         );
 
         students.push(student);
